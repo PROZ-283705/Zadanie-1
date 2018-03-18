@@ -21,8 +21,8 @@ import javafx.scene.control.Alert.AlertType;
  */
 public class Main extends Application {
 	
-	Button btnShowLoginWindow= new Button();;
-	Label lblLoggedIn = new Label();
+	private Button btnShowLoginWindow= new Button();;
+	private Label lblLoggedIn = new Label();
 	
 	/**
 	 * W metodzie <b>start</b> wyœwietlane jest okno z zarz¹dc¹ <b>VBox</b>, w którym znajduj¹ siê kontrolki:<br> 
