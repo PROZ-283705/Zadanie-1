@@ -5,6 +5,7 @@ import java.util.Optional;
 import javafx.application.*;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.stage.*;
 import javafx.util.Pair;
 import javafx.scene.*;
@@ -12,22 +13,33 @@ import javafx.scene.layout.*;
 import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
 
-
+/**
+ * Klasa g³ówna wyœwietlaj¹ca okno z nazw¹ u¿ytkownika i mo¿liwoœci¹ wywo³ania logowania
+ * 
+ * @author Piotr Muzyczuk / muzyczukp@outlook.com
+ *  
+ */
 public class Main extends Application {
 	
-	Button btnShowLoginWindow;
+	Button btnShowLoginWindow= new Button();;
 	Label lblLoggedIn = new Label();
 	
+	/**
+	 * W metodzie <b>start</b> wyœwietlane jest okno z zarz¹dc¹ <b>VBox</b>, w którym znajduj¹ siê kontrolki:<br> 
+	 * <ul><li><b>lblLoggedIn</b> typu Label pokazuj¹c¹ stan zalogowania (nazwa u¿ytkownika i œrodowisko jeœli zalogowany) lub informacja o braku zalogowanego u¿ytkownika,</li>
+	 * <li><b>btnShowLoginWindow</b> typu Button umo¿liwiaj¹c¹ wywo³anie okna logowania</li></ul>
+	 * @param primaryStage g³ówne okno aplikacji
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 
 		lblLoggedIn.setText("Brak zalogowanego u¿ytkownika");
-		btnShowLoginWindow = new Button();
 		btnShowLoginWindow.setText("Zaloguj siê");
 		btnShowLoginWindow.setOnAction( e->showLoginWindow() );
 		
 		VBox vBox = new VBox();
 		vBox.setSpacing(10);
+		vBox.setAlignment(Pos.CENTER);
 		VBox.setMargin(btnShowLoginWindow,new Insets(10,10,10,10));
 		VBox.setMargin(lblLoggedIn,new Insets(10,10,10,10));
 		ObservableList<Node> vList = vBox.getChildren();
@@ -42,10 +54,17 @@ public class Main extends Application {
 			
 	}
 	
+	/**
+	 * Konstruktor standardowy dla JavaFX
+	 * @param args standardowe argumenty wywo³ania
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}
 	
+	/**
+	 * Metoda <b>showLoginWindow</b> odpowiada za wywo³anie okna logowania i odebranie z niego danych. Nastêpnie wprowadza nazwê zalogowanego u¿ytkownika oraz œrodowisko do kontrolki lblLoggedIn, gdy logowanie przebiegnie pomyœlnie lub wyœwietla komunikat o b³êdzie logowania w razie niepowodzenia w formie Alertu.
+	 */
 	public void showLoginWindow() {
 		
 		lblLoggedIn.setText("Brak zalogowanego u¿ytkownika");
