@@ -2,10 +2,9 @@ package loginbox;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.util.Pair;
 
 /**
- * Klasa odpowiadaj¹ca za przechowywanie i walidacjê u¿ytkowników w systemie
+ * Klasa odpowiadajï¿½ca za przechowywanie i walidacjï¿½ uï¿½ytkownikï¿½w w systemie
  * @author Piotr Muzyczuk / muzyczukp@outlook.com
  *
  */
@@ -16,18 +15,18 @@ public class Users {
 	private ObservableList<String> userListProd = FXCollections.observableArrayList();
 	
 	/**
-	 * Konstruktor wype³nia listy u¿ytkowników
+	 * Konstruktor wypeÅ‚nia listy uï¿½ytkownikï¿½w
 	 */
 	public Users() {
 		userListDev.addAll("jan.nowak","jakub.malinowski","jacek.telkowski");
-		userListTest.addAll("edyta.nowak","ewa.gruszka","el¿bieta.rankowska");
-		userListProd.addAll("micha³.nitowski","marcin.nowak","maurycy.lampa");
+		userListTest.addAll("edyta.nowak","ewa.gruszka","elzbieta.rankowska");
+		userListProd.addAll("michal.nitowski","marcin.nowak","maurycy.lampa");
 	}
 	
 	/**
-	 * Metoda <b>getUsersForEnv</b> zwraca listê u¿ytkowników danego œrodowiska w postaci ObservableList
-	 * @param envName nazwa œrodowiska, dla którego chcemy otrzymaæ listê u¿ytkowników
-	 * @return lista u¿ytkowników œrodowiska
+	 * Metoda <b>getUsersForEnv</b> zwraca listï¿½ uï¿½ytkownikï¿½w danego ï¿½rodowiska w postaci ObservableList
+	 * @param envName nazwa ï¿½rodowiska, dla ktï¿½rego chcemy otrzymaï¿½ listï¿½ uï¿½ytkownikï¿½w
+	 * @return lista uï¿½ytkownikï¿½w ï¿½rodowiska
 	 */
 	public ObservableList<String> getUsersForEnv(String envName)
 	{
@@ -41,11 +40,11 @@ public class Users {
 	}
 	
 	/**
-	 * Metoda <b>isPassCorrect</b> odpowiada za walidacjê hase³ u¿ytkowników.
-	 * @param envName nazwa œrodowiska
-	 * @param userName nazwa u¿ytkownika
-	 * @param userPass has³o u¿ytkownika
-	 * @return <b>true</b> jeœli znaleziono podanego u¿ytkownika w podanym œrodowisku i jego has³o jest poprawne lub <b>false</b> w przeciwnym przypadku
+	 * Metoda <b>isPassCorrect</b> odpowiada za walidacjï¿½ haseï¿½ uï¿½ytkownikï¿½w.
+	 * @param envName nazwa ï¿½rodowiska
+	 * @param userName nazwa uï¿½ytkownika
+	 * @param userPass hasï¿½o uï¿½ytkownika
+	 * @return <b>true</b> jeï¿½li znaleziono podanego uï¿½ytkownika w podanym ï¿½rodowisku i jego hasï¿½o jest poprawne lub <b>false</b> w przeciwnym przypadku
 	 */
 	public Boolean isPassCorrect(String envName, String userName, String userPass)
 	{

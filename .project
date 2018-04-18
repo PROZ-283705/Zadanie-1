@@ -20,11 +20,4 @@
 		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/loginbox/images/padlock.png</name>
-			<type>1</type>
-			<location>D:/Piotr/Pobrane/padlock.png</location>
-		</link>
-	</linkedResources>
 </projectDescription>

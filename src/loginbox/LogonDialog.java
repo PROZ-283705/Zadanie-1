@@ -11,7 +11,7 @@ import javafx.collections.FXCollections;
 import javafx.geometry.Insets;
 
 /**
- * Klasa opisuj¹ca okienko logowania
+ * Klasa opisujï¿½ca okienko logowania
  * @author muzyc
  *
  */
@@ -26,28 +26,28 @@ public class LogonDialog {
 	private ButtonType buttonTypeOk = new ButtonType("Logon",ButtonData.OK_DONE);
 	
 	/**
-	 * Konstruktor tworzy customowy dialog z zarz¹dc¹ typu GridPane i kilkalnymi kontrolkami:
-	 * <ul><li><b>chbxEnv</b> typu ChoiceBox s³u¿aca do wyboru œrodkowiska do zalogowania,</li>
-	 * <li><b>cmbUser</b> typu ComboBox s³u¿¹ca do wyboru nazwy u¿ytkownika z listy lub wpisania jej dziêki ustawieniu atrybutu <i>editable</i> na true,</li>
-	 * <li><b>pfieldPass</b> typu PasswordField s³u¿¹ca do wpisania has³a.</li></ul>
-	 * <p>Dodatkowo w dialogu znajduj¹ siê przyciski s³u¿¹ce do potwierdzenia lub zaniechania logowania.</p>
-	 * <p>Dziêki dodaniu do dialogu <b>setResultContverter</b>-a zwraca on <i>parê œrodowisko, u¿ytkownik</i> w przypadku poprawnie podanych poœwiadczeñ lub <i>null</i> w przypadku b³êdnych.</p>
-	 * <p>Dodano tak¿e listenery do zmian wartoœci wy¿ej wymienionych kontrolek, aby aktualizowaæ listê u¿ytkowników po zmianie œrodowiska oraz aby w³¹czyæ przycisk logowania jedynie, gdy nazwa u¿ytkownika i has³o bêd¹ zawiera³y jakieœ wartoœci.</p>
-	 * @param title tytu³ wyœwietlany na górnej belce okna
-	 * @param header tekst wyœwietlany w górnej czêœci okna
+	 * Konstruktor tworzy customowy dialog z zarzï¿½dcï¿½ typu GridPane i kilkalnymi kontrolkami:
+	 * <ul><li><b>chbxEnv</b> typu ChoiceBox sï¿½uï¿½aca do wyboru ï¿½rodkowiska do zalogowania,</li>
+	 * <li><b>cmbUser</b> typu ComboBox sï¿½uï¿½ï¿½ca do wyboru nazwy uï¿½ytkownika z listy lub wpisania jej dziï¿½ki ustawieniu atrybutu <i>editable</i> na true,</li>
+	 * <li><b>pfieldPass</b> typu PasswordField sï¿½uï¿½ï¿½ca do wpisania hasï¿½a.</li></ul>
+	 * <p>Dodatkowo w dialogu znajdujï¿½ siï¿½ przyciski sï¿½uï¿½ï¿½ce do potwierdzenia lub zaniechania logowania.</p>
+	 * <p>Dziï¿½ki dodaniu do dialogu <b>setResultContverter</b>-a zwraca on <i>parï¿½ ï¿½rodowisko, uï¿½ytkownik</i> w przypadku poprawnie podanych poï¿½wiadczeï¿½ lub <i>null</i> w przypadku bï¿½ï¿½dnych.</p>
+	 * <p>Dodano takï¿½e listenery do zmian wartoï¿½ci wyï¿½ej wymienionych kontrolek, aby aktualizowaï¿½ listï¿½ uï¿½ytkownikï¿½w po zmianie ï¿½rodowiska oraz aby wï¿½ï¿½czyï¿½ przycisk logowania jedynie, gdy nazwa uï¿½ytkownika i hasï¿½o bï¿½dï¿½ zawieraï¿½y jakieï¿½ wartoï¿½ci.</p>
+	 * @param title tytuï¿½ wyï¿½wietlany na gï¿½rnej belce okna
+	 * @param header tekst wyï¿½wietlany w gï¿½rnej czï¿½ci okna
 	 */
 	public LogonDialog(String title,String header){
 		dialog.setTitle(title);
 		dialog.setHeaderText(header);
 		
 		ImageView imageView = new ImageView();
-		Image image = new Image(getClass().getResourceAsStream("images/padlock.png"));
+		Image image = new Image("images/padlock.png");
 		imageView.setImage(image);
 		dialog.setGraphic(imageView);
 		
-		Label lblEnv = new Label("Œrodowisko:");
-		Label lblUser = new Label("U¿ytkownik:");
-		Label lblPass = new Label("Has³o:");
+		Label lblEnv = new Label("Åšrodowisko:");
+		Label lblUser = new Label("UÅ¼ytkownik:");
+		Label lblPass = new Label("HasÅ‚o:");
 		chbxEnv.setItems(FXCollections.observableArrayList(new Environment("Deweloperskie"),new Environment("Testowe"),new Environment("Produkcyjne")));
 		chbxEnv.getSelectionModel().selectFirst();
 		cmbUser.setItems(users.getUsersForEnv("Deweloperskie"));
@@ -87,7 +87,7 @@ public class LogonDialog {
 	}
 	
 	/**
-	 * Metoda <b>toggleLogonButton</b> odpowiada za w³¹czenie lub wy³¹czenie przycisku logowania. W³¹cza go, gdy nazwa u¿ytkownika i has³o s¹ niepuste, a wy³¹cza gdy s¹ puste.
+	 * Metoda <b>toggleLogonButton</b> odpowiada za wï¿½ï¿½czenie lub wyï¿½ï¿½czenie przycisku logowania. Wï¿½ï¿½cza go, gdy nazwa uï¿½ytkownika i hasï¿½o sï¿½ niepuste, a wyï¿½ï¿½cza gdy sï¿½ puste.
 	 */
 	private void toggleLogonButton() {
 		if(cmbUser.getValue() == null || pfieldPass.getText() == null || cmbUser.getValue().isEmpty() || pfieldPass.getText().trim().isEmpty())
@@ -97,8 +97,8 @@ public class LogonDialog {
 	}
 	
 	/**
-	 * Metoda <b>changeEnvironment</b> odpowiada za zmianê listy u¿ytkowników w kontrolce <b>cmbUser</b>, aby zawiera³a u¿ytkowników skojarzonych z tym œrodowiskiem. Czyœci tak¿e pole has³a.
-	 * @param newVal nowo wybrane œrodowisko
+	 * Metoda <b>changeEnvironment</b> odpowiada za zmianï¿½ listy uï¿½ytkownikï¿½w w kontrolce <b>cmbUser</b>, aby zawieraï¿½a uï¿½ytkownikï¿½w skojarzonych z tym ï¿½rodowiskiem. Czyï¿½ci takï¿½e pole hasï¿½a.
+	 * @param newVal nowo wybrane ï¿½rodowisko
 	 */
 	private void changeEnvironment(Environment newVal) {
 		cmbUser.getSelectionModel().clearSelection();
@@ -107,8 +107,8 @@ public class LogonDialog {
 	}
 	
 	/**
-	 * Metoda <b>showAndWait</b> wywo³uje dialog i zwraca jego dane wyœciowe
-	 * @return dane wyjœciowe customowego dialogu logowania
+	 * Metoda <b>showAndWait</b> wywoï¿½uje dialog i zwraca jego dane wyï¿½ciowe
+	 * @return dane wyjï¿½ciowe customowego dialogu logowania
 	 */
 	public Optional<Pair<Environment, String>> showAndWait() {
 		return dialog.showAndWait();

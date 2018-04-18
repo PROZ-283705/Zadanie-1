@@ -1,7 +1,7 @@
 package loginbox;
 
 /**
- * Klasa opisuj¹ca œrodowisko, do którego mo¿na siê zalogowaæ
+ * Klasa opisujÄ…ca Å›rodowisko, do ktÃ³rego moÅ¼na siÄ™ zalogowaÄ‡
  * 
  * @author Piotr Muzyczuk / muzyczukp@outlook.com
  *
@@ -10,16 +10,16 @@ public class Environment {
 	private String environmentName;
 	
 	/**
-	 * Kontruktor przyjmuje nazwê i tworzy œrodowsko o podanej nazwie
-	 * @param name nazwa tworzonego œrodowiska
+	 * Kontruktor przyjmuje nazwÄ™ i tworzy Å›rodowsko o podanej nazwie
+	 * @param name nazwa tworzonego Å›rodowiska
 	 */
 	public Environment(String name) {
 		environmentName = name;
 	}
 	
 	/**
-	 * Metoda <b>getName</b> zwraca nazwê œrodowiska
-	 * @return nazwa œrodowiska
+	 * Metoda <b>getName</b> zwraca nazwÄ™ Å›rodowiska
+	 * @return nazwa Å›rodowiska
 	 */
 	public String getName()	{
 		return environmentName;
