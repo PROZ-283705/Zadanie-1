@@ -30,9 +30,9 @@ public class FirstWindow {
 	private Stage stage = new Stage();
 	
 	/**
-	 * W <b>konstruktorze</b> tworzone jest okno z zarządcą <b>VBox</b>, w którym znajduj� si� kontrolki:<br> 
-	 * <ul><li><b>lblLoggedIn</b> typu Label pokazującą stan zalogowania (nazwa użytkownika i �rodowisko je�li zalogowany) lub informacja o braku zalogowanego u�ytkownika,</li>
-	 * <li><b>btnShowLoginWindow</b> typu Button umo�liwiaj�c� wywo�anie okna logowania</li></ul>
+	 * W <b>konstruktorze</b> tworzone jest okno z zarządcą <b>VBox</b>, w którym znajdują się kontrolki:<br> 
+	 * <ul><li><b>lblLoggedIn</b> typu Label pokazująca stan zalogowania (nazwa użytkownika i środowisko jeśli zalogowany) lub informacja o braku zalogowanego użytkownika,</li>
+	 * <li><b>btnShowLoginWindow</b> typu Button umożliwiająca wywołanie okna logowania</li></ul>
 	 */
 	public FirstWindow()
 	{
@@ -64,7 +64,7 @@ public class FirstWindow {
 	}
 	
 	/**
-	 * Metoda <b>showLoginWindow</b> odpowiada za wywo�anie okna logowania i odebranie z niego danych. Nast�pnie wprowadza nazw� zalogowanego u�ytkownika oraz �rodowisko do kontrolki lblLoggedIn, gdy logowanie przebiegnie pomy�lnie lub wy�wietla komunikat o b��dzie logowania w razie niepowodzenia w formie Alertu.
+	 * Metoda <b>showLoginWindow</b> odpowiada za wywołanie okna logowania i odebranie z niego danych. Następnie wprowadza nazwę zalogowanego użytkownika oraz środowisko do kontrolki lblLoggedIn, gdy logowanie przebiegnie pomyślnie lub wyświetla komunikat o błędzie logowania w razie niepowodzenia w formie Alertu.
 	 */
 	public void showLoginWindow() {
 		

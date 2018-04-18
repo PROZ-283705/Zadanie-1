@@ -11,7 +11,7 @@ import javafx.collections.FXCollections;
 import javafx.geometry.Insets;
 
 /**
- * Klasa opisuj�ca okienko logowania
+ * Klasa opisująca okienko logowania
  * @author muzyc
  *
  */
@@ -26,15 +26,15 @@ public class LogonDialog {
 	private ButtonType buttonTypeOk = new ButtonType("Logon",ButtonData.OK_DONE);
 	
 	/**
-	 * Konstruktor tworzy customowy dialog z zarz�dc� typu GridPane i kilkalnymi kontrolkami:
-	 * <ul><li><b>chbxEnv</b> typu ChoiceBox s�u�aca do wyboru �rodkowiska do zalogowania,</li>
-	 * <li><b>cmbUser</b> typu ComboBox s�u��ca do wyboru nazwy u�ytkownika z listy lub wpisania jej dzi�ki ustawieniu atrybutu <i>editable</i> na true,</li>
-	 * <li><b>pfieldPass</b> typu PasswordField s�u��ca do wpisania has�a.</li></ul>
-	 * <p>Dodatkowo w dialogu znajduj� si� przyciski s�u��ce do potwierdzenia lub zaniechania logowania.</p>
-	 * <p>Dzi�ki dodaniu do dialogu <b>setResultContverter</b>-a zwraca on <i>par� �rodowisko, u�ytkownik</i> w przypadku poprawnie podanych po�wiadcze� lub <i>null</i> w przypadku b��dnych.</p>
-	 * <p>Dodano tak�e listenery do zmian warto�ci wy�ej wymienionych kontrolek, aby aktualizowa� list� u�ytkownik�w po zmianie �rodowiska oraz aby w��czy� przycisk logowania jedynie, gdy nazwa u�ytkownika i has�o b�d� zawiera�y jakie� warto�ci.</p>
-	 * @param title tytu� wy�wietlany na g�rnej belce okna
-	 * @param header tekst wy�wietlany w g�rnej cz�ci okna
+	 * Konstruktor tworzy customowy dialog z zarządcą typu GridPane i kilkalnymi kontrolkami:
+	 * <ul><li><b>chbxEnv</b> typu ChoiceBox służaca do wyboru środkowiska do zalogowania,</li>
+	 * <li><b>cmbUser</b> typu ComboBox służąca do wyboru nazwy użytkownika z listy lub wpisania jej dzięki ustawieniu atrybutu <i>editable</i> na true,</li>
+	 * <li><b>pfieldPass</b> typu PasswordField służąca do wpisania hasła.</li></ul>
+	 * <p>Dodatkowo w dialogu znajdują się przyciski służące do potwierdzenia lub zaniechania logowania.</p>
+	 * <p>Dzięki dodaniu do dialogu <b>setResultContverter</b>-a zwraca on <i>parę środowisko, użytkownik</i> w przypadku poprawnie podanych poświadczeń lub <i>null</i> w przypadku błędnych.</p>
+	 * <p>Dodano także listenery do zmian wartości wyżej wymienionych kontrolek, aby aktualizować listę użytkowników po zmianie środowiska oraz aby włączyć przycisk logowania jedynie, gdy nazwa użytkownika i hasło będą zawierały jakieś wartości.</p>
+	 * @param title tytuł wyświetlany na górnej belce okna
+	 * @param header tekst wyświetlany w górnej części okna
 	 */
 	public LogonDialog(String title,String header){
 		dialog.setTitle(title);
@@ -87,7 +87,7 @@ public class LogonDialog {
 	}
 	
 	/**
-	 * Metoda <b>toggleLogonButton</b> odpowiada za w��czenie lub wy��czenie przycisku logowania. W��cza go, gdy nazwa u�ytkownika i has�o s� niepuste, a wy��cza gdy s� puste.
+	 * Metoda <b>toggleLogonButton</b> odpowiada za włączenie lub wyłączenie przycisku logowania. Włącza go, gdy nazwa użytkownika i hasło są niepuste, a wyłącza gdy są puste.
 	 */
 	private void toggleLogonButton() {
 		if(cmbUser.getValue() == null || pfieldPass.getText() == null || cmbUser.getValue().isEmpty() || pfieldPass.getText().trim().isEmpty())
@@ -97,8 +97,8 @@ public class LogonDialog {
 	}
 	
 	/**
-	 * Metoda <b>changeEnvironment</b> odpowiada za zmian� listy u�ytkownik�w w kontrolce <b>cmbUser</b>, aby zawiera�a u�ytkownik�w skojarzonych z tym �rodowiskiem. Czy�ci tak�e pole has�a.
-	 * @param newVal nowo wybrane �rodowisko
+	 * Metoda <b>changeEnvironment</b> odpowiada za zmianę listy użytkowników w kontrolce <b>cmbUser</b>, aby zawierała użytkowników skojarzonych z tym środowiskiem. Czyści także pole hasła.
+	 * @param newVal nowo wybrane środowisko
 	 */
 	private void changeEnvironment(Environment newVal) {
 		cmbUser.getSelectionModel().clearSelection();
@@ -107,8 +107,8 @@ public class LogonDialog {
 	}
 	
 	/**
-	 * Metoda <b>showAndWait</b> wywo�uje dialog i zwraca jego dane wy�ciowe
-	 * @return dane wyj�ciowe customowego dialogu logowania
+	 * Metoda <b>showAndWait</b> wywołuje dialog i zwraca jego dane wyjściowe
+	 * @return dane wyjściowe customowego dialogu logowania
 	 */
 	public Optional<Pair<Environment, String>> showAndWait() {
 		return dialog.showAndWait();

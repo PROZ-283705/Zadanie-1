@@ -4,7 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 /**
- * Klasa odpowiadaj�ca za przechowywanie i walidacj� u�ytkownik�w w systemie
+ * Klasa odpowiadająca za przechowywanie i walidację użytkowników w systemie
  * @author Piotr Muzyczuk / muzyczukp@outlook.com
  *
  */
@@ -15,7 +15,7 @@ public class Users {
 	private ObservableList<String> userListProd = FXCollections.observableArrayList();
 	
 	/**
-	 * Konstruktor wypełnia listy u�ytkownik�w
+	 * Konstruktor wypełnia listy użytkowników
 	 */
 	public Users() {
 		userListDev.addAll("jan.nowak","jakub.malinowski","jacek.telkowski");
@@ -24,9 +24,9 @@ public class Users {
 	}
 	
 	/**
-	 * Metoda <b>getUsersForEnv</b> zwraca list� u�ytkownik�w danego �rodowiska w postaci ObservableList
-	 * @param envName nazwa �rodowiska, dla kt�rego chcemy otrzyma� list� u�ytkownik�w
-	 * @return lista u�ytkownik�w �rodowiska
+	 * Metoda <b>getUsersForEnv</b> zwraca listę użytkowników danego środowiska w postaci ObservableList
+	 * @param envName nazwa środowiska, dla którego chcemy otrzymać listę użytkowników
+	 * @return lista użytkowników środowiska
 	 */
 	public ObservableList<String> getUsersForEnv(String envName)
 	{
@@ -40,11 +40,11 @@ public class Users {
 	}
 	
 	/**
-	 * Metoda <b>isPassCorrect</b> odpowiada za walidacj� hase� u�ytkownik�w.
-	 * @param envName nazwa �rodowiska
-	 * @param userName nazwa u�ytkownika
-	 * @param userPass has�o u�ytkownika
-	 * @return <b>true</b> je�li znaleziono podanego u�ytkownika w podanym �rodowisku i jego has�o jest poprawne lub <b>false</b> w przeciwnym przypadku
+	 * Metoda <b>isPassCorrect</b> odpowiada za walidację haseł użytkowników.
+	 * @param envName nazwa środowiska
+	 * @param userName nazwa użytkownika
+	 * @param userPass hasło użytkownika
+	 * @return <b>true</b> jeżli znaleziono podanego użytkownika w podanym środowisku i jego hasło jest poprawne lub <b>false</b> w przeciwnym przypadku
 	 */
 	public Boolean isPassCorrect(String envName, String userName, String userPass)
 	{
